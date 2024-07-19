@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Union, Optional,Tuple
 import torch
 from PIL import Image
 from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
@@ -43,7 +43,7 @@ def describe_person(image: Image, device: Union[str, torch.device] = "cpu"):
     return person_description
 
 
-def get_pos_and_neg_prompt(image: Image = None) -> tuple[str, str]:
+def get_pos_and_neg_prompt(image: Image = None) -> Tuple[str, str]:
     """Generates a prompt for generating a Pixar-style image of a person. If the image is provided, the prompt will
     include the description of the person in the image, otherwise it will be generic.
 
