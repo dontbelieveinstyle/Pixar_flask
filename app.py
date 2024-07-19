@@ -72,6 +72,6 @@ def post_endpoint():
     return imagelist, 201
  
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, threaded=True)
+    app.run()
 
 
