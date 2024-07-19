@@ -2,7 +2,7 @@ import torch
 import random
 from diffusers import EulerAncestralDiscreteScheduler, StableDiffusionXLImg2ImgPipeline
 from PIL import Image
-
+import os
 from prompt_utils import get_pos_and_neg_prompt
 
 
