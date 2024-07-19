@@ -1,0 +1,12 @@
+accelerate
+diffusers
+fire
+ipython
+jupyter
+numpy
+peft
+Pillow
+torchvision
+torch
+transformers
+flask
