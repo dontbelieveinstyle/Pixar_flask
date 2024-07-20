@@ -68,8 +68,7 @@ def post_endpoint():
     #     image_base, num_avatars, crop, device, generate_prompt_from_image
     # )
     imagelist= generate_avatar(
-        image_base, num_avatars,crop="center",generate_prompt_from_image=False
-        ,device="cuda"
+        image_base, num_avatars,"center",False,"cuda"
     )
      
     
