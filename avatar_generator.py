@@ -34,13 +34,13 @@ class PixarAvatarGenerator:
     def init_model(self, device):
         """Initializes the SDXL model with the LoRA layers and FreeU diffusion process enhancement."""
         # load the base diffusion model
-        model_path = "https://huggingface.co/martyn/sdxl-turbo-mario-merge-top-rated/blob/main/topRatedTurboxlLCM_v10.safetensors"
+        #model_path = "https://huggingface.co/martyn/sdxl-turbo-mario-merge-top-rated/blob/main/topRatedTurboxlLCM_v10.safetensors"
         # 获取当前文件的目录
         #base_dir = os.path.dirname(__file__)
         
         # 拼接文件路径
         #model_path = os.path.join(base_dir, 'model', 'topRatedTurboxlLCM_v10.safetensors')
-        #model_path = "/home/Pixar_flask/model/topRatedTurboxlLCM_v10.safetensors"
+        model_path = "./topRatedTurboxlLCM_v10.safetensors"
 
         if "cuda" in device:
             pipe = StableDiffusionXLImg2ImgPipeline.from_single_file(
