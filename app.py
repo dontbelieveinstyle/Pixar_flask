@@ -59,17 +59,21 @@ def post_endpoint():
     # 假设我们期望接收一个名为'name'的字段
     image_base = data.get('image_base')
     num_avatars = data.get('num_avatars')
-    crop = data.get('crop')
-    generate_prompt_from_image = data.get('generate_prompt_from_image')
-    device = data.get('device')
+    #crop = data.get('crop')
+    #generate_prompt_from_image = data.get('generate_prompt_from_image')
+    #device = data.get('device')
     
     # 处理数据，例如将数据保存到数据库中
+    # imagelist= generate_avatar(
+    #     image_base, num_avatars, crop, device, generate_prompt_from_image
+    # )
     imagelist= generate_avatar(
-        image_base, num_avatars, crop, device, generate_prompt_from_image
+        image_base, num_avatars
     )
+     
     
     # 返回响应
-    return imagelist, 201
+    return imagelist
  
 if __name__ == '__main__':
     app.run()
