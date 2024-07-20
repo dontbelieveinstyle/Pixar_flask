@@ -68,7 +68,8 @@ def post_endpoint():
     #     image_base, num_avatars, crop, device, generate_prompt_from_image
     # )
     imagelist= generate_avatar(
-        image_base, num_avatars
+        image_base, num_avatars,crop="center",generate_prompt_from_image=False
+        ,device="cuda"
     )
      
     
@@ -77,5 +78,3 @@ def post_endpoint():
  
 if __name__ == '__main__':
     app.run()
-
-
